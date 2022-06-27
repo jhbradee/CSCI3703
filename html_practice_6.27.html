@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--css font loading-->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100;400&display=swap" rel="stylesheet">
+		-->
+		<link href="main.css" rel="stylesheet">
+		<!-- add javascript:
+		<script src="script.js" defer></script>
+		<style> -->
+		<!--this would be for internal CSS and JS, but i don't want to mess up what i am doing-->
+		</style>
+		<title>Practice HTML</title>
+	</head>
+<!--<opening tag></closing tag> -->
+
+	<body>
+		<dl class="nav-bar">
+			<dt><a href="#Home">Home</a></dt>
+			<dt><a href="#About">About</a></dt>
+			<dt><a href="#End">End</a></dt>
+		</dl>
+		<!--using inline css and intro to p tag
+		example:p style="color: blue"-->
+		<p class="example1"> paragraph tag, will add seperation between each time it is used</p>
+		 <!-- choose headline size/tag based on the type/importance of the text to be shown --> 
+		 <p class="example1">
+			<h1>Headline 1- largest</h1>
+			<h2 class="example1">Headline 2</h2>
+			<h3>Headline 3</h3>
+			<h4>Headline 4</h4>
+			<h5>Headline 5</h5>
+			<h6>Headline 6 - smallest</h6>
+		</p>
+
+		<!--inline formating of text-->
+		<div class="example1">
+		<p><em>italic text, used for emphasis</em></p>
+		<p><i>visual-only italics, will not emphasize in audio content</i></p>
+		<p><strong>bold text, highlight important info</strong></p>
+		<p><b>also bold text, no special meaning to audio content</b></p>
+		<p>formatting of text is often used in CSS file</p>
+		</div>
+
+		<!--lists, used in navigation, on screen lists, etc-->
+		<div class="example1">
+		<ul>
+			<li>this</li>
+			<li>is</li>
+			<li>list </li>
+			<li>elements</li>
+			<li>unordered</li>
+		</ul>
+
+		<ol>
+			<li>this</li>
+			<li>is</li>
+			<li>list </li>
+			<li>elements</li>
+			<li>ordered</li>
+		</ol>
+
+		<dl>
+			<dt>term</dt>
+				<dd>description or definition of the term above</dd>
+				<dd>can use multiple dd tags</dd>
+			<dt>second term</dt>
+		</dl>
+		</div>
+
+		<!--quotes-->
+		<div>
+		<p> practicing quotes</p>
+		<blockquote>
+			<p>sample text to quote in blockquote</p>
+			<cite>-Myself</cite>
+		</blockquote>
+
+		<p class="example2">This is an example of using the <q>q tag</q> which will dynamically change the style of quotes depending on the language/web browser, the next will show an example presented with typical french quote style.</p>
+		<p lang="fr" class="example2">This is an example of using the <q>q tag</q> which will dynamically change the style of quotes depending on the language/web browser</p>
+		</div>
+		<!--
+		inline elements are wrapped around certain text in a group
+
+		block-level elements will take a whole section of text to organize in a new block 
+		-->
+
+		<!--date and time-->
+		<div class="example3">
+		<time datetime="2022-06-27">June 27, 2022, the machine readable is "YYYY-MM-DD"</time>
+		<br>
+		<time datetime="16:15 - 05:00">4:15 in New York time, machine readable is "hh-mm-ss.ddd+-hh:mm</time>
+		</div>
+
+		<!--attributes are after the element name, for example: datetime, lang-->
+
+		<!--using code tags-->
+		<p class="example4">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. <code>{color: green}</code>Duis a libero velit. Quisque ornare dolor vel ipsum pharetra, non bibendum velit hendrerit. Vestibulum dapibus eros nec magna accumsan, in sodales felis mattis. Nam non blandit ipsum. Nullam eu dolor vel lectus congue euismod rutrum interdum dolor. <code>&lt;</code>Pellentesque blandit sit amet neque eget finibus.<code>&gt;</code>
+			<br>Using a <code>&lt;</code>br<code>&gt;</code> tag which is a line break
+			<pre>
+			Using <code>&lt;</code>pre<code>&gt;</code>
+						 to
+				show
+					spacing
+			in text.
+			</pre> 
+		</p>
+
+		<!--subscripts (set below the text baseline), superscripts (set above the text baseline), and small text-->
+		<p class="example4">
+			H<sub>2</sub>O
+			<br>footnote example.<sup>1</sup>
+			<br><small>small text to show small importance</small>
+		</p>
+
+		<!--attributes
+		order doesn't matter
+
+		global attibutes: can be applied to any HTML element, examples: class, id, lang, dir -->
+		<p class="practice1">can reuse the class name in different paragraphs/elements</p>
+		<p class="practice1" id = "id-practice">This has attributes of both class and id, id will be specific to this paragraph only which could be helpful for CSS/javascript</p>
+
+		<!--ARIA Roles: provide acessible info about the specific element-->
+		<p aria-label="Hello">
+			<div aria-hidden="true">
+				<span>H</span>
+				<span>E</span>
+				<span>L</span>
+				<span>L</span>
+				<span>O</span>
+			</div>
+			
+			&lt;
+			&gt;
+			&amp;
+			&copy;
+			&trade;
+			&star;
+			Non&nbsp;Breaking space example
+		</p>
+
+		<!--using links
+		a=anchor
+		href=hypertext reference, can put whole url (absolute link), link to another spot on the page (relative page)
+		-->
+		<a href="https://example.com">absolute link</a>
+		<a href="../index.html">relative link</a>
+
+		<!--navigation bars-->
+		<nav role="navigation" aria-label="main menu">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/people">people</a></li>
+				<li><a href="/places">places</a></li>
+				<li><a href="/about">about</a></li>
+			</ul>
+		</nav>
+
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumbs">
+				<li><a href="/">Home</a></li>
+				<li><a href="/people">people</a></li>
+				<li><a href="/places">places</a></li>
+				<li><a href="/about">about</a></li>
+			</ol>
+		</nav>
+
+		<footer>
+			<a href="/about">About</a>
+			<a href="/about/legal">Terms</a>
+		</footer>
+
+		<!--images, want high quality + small file size, 
+		gif:compress large areas of a single color
+		svg: vector file, very small file size (ideal), useful for logos, icons
+		jpg: compress photos
+		png: images that need transparency, good at compression
+		scr: link to image
+		alt: descriptive of the image
+		width/height: size of image-->
+		<!--
+		<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-480.jpg" alt="real cute doggo" width="480" height="360">
+		-->
+
+		<!--based on display pixel-density (not size of screen-->
+		<!--
+		<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-480.jpg" alt="real cute doggo" width="480" height="360"
+
+			srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-960.jpg 2x,
+			https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-1440.jpg 3x,
+			https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-1920.jpg 4x"
+		>
+		-->
+
+		<!--based on size of screen window-->
+		<!--
+		<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-480.jpg" alt="real cute doggo" width="480" height="360"
+
+			srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-960.jpg 480w,
+			https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-1440.jpg 960w,
+			https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-1920.jpg 1920w"
+			
+			sizes="(max-width:480px) 240px,
+			(max-width: 960px) 480px,
+			(max-width: 1440px) 960px,
+			1920px"
+		>
+		<picture>
+			<source media="(min-width:660px)" srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-720.jpg">
+			<source scrset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-cropped-320.jpg">
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-480.jpg" alt="real cute doggo with more background" width="480" height="360">
+		</picture>
+		-->
+		<!--combining everything above-->
+		<figure>
+		<picture>
+			<source media="(min-width:660px)" srcset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-320.jpg 320w,
+			https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-480.jpg 480w,
+			https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-720.jpg 720w,
+			https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-960.jpg 960w,
+			https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-1440.jpg 1440w,
+			https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-1920.jpg 1920w">
+			<source scrset="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-cropped-320.jpg 320w,
+			https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-cropped-480.jpg 480w,
+			https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-cropped-720.jpg 720w,
+			https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-cropped-960.jpg 960w">
+			<img class="img"src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog2-480.jpg" alt="real cute doggo with more background" width="480" height="360">
+		</picture>
+		<figcaption>This is a pitcture of a really cute dog that the lesson has provided</figcaption>
+		</figure>
+
+		<!--putting audio in a webpage-->
+		<audio controls loop> <!--autoplay-->
+			<source src="birds.ogg"
+					type="audio/ogg; codec=opus">
+			<source src="birds.mp3"
+					type="audio/mpeg">
+			Sample text that will show if the audio is not supported
+		</audio>
+
+		<!--video, can use source to add additional videos to display based on size/resolution of videos, adaptive bitrate streaming: switch from one res to another based on network status and speed
+		webvtt: for caption files-->
+		<video src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/moonwalk.480p.h264.mp4" controls>
+			<track src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/moonwalk.vtt"
+				kind="captions"
+				label="english"
+				srclang="en"
+				default>
+			<track src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/moonwalk.es-la.es.vtt"
+				kind="captions"
+				label="Espanõl"
+				srclang="es">
+		</video>
+
+		<!--embedding using iframes-->
+		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5qap5aO4i9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		<!--supporting languages-->
+		<p lang="en-US" dir="ltr" charset="UTF-8">lang, dir, and charset are usually defined in the html tag, here i placed it as a paragraph element</p>
+		<p lang="ar" dir="rtl"></p>
+
+		<!--using div and span-->
+		<div>
+			<p>div are block elements, help to seperate content and we can use it to specifically target sections or block of code. meanwhile span is <span>inline code that we can use to target even further</span> to develop the webpage</p>
+		</div>
+
+		<!--notes about html file:
+		doctype declaration: says the era the HTML file is from, "this is the most updated version of html for this webpage", <!DOCTYPE html> 
+		<html>tag to use</html>
+		<head>metadata, not displayed, put charset here
+			<meta charset="utf-8">
+			<title>webpage name on tab/bookmark</title>
+			a lot more meta tags that we can use
+			link to CSS/javascript files
+			<link href="main.css" rel="stylesheet">
+			js can be loaded at top or bottom
+			<script src="fileName.js"></script>
+		</head>
+		<body>to be displayed
+		main (only used once), header, footer, article, section, aside 
+		</body>
+		-->
+
+		<!--forms-->
+		<form action="practice_input.html" method="get"<!--get method is not super secure, do not use in future-->
+			<label for="name">Name</label>
+			<input id="name" name="name" type="text" placeholder="Jane Smith"></input>
+			<label>
+				Email
+				<input name="email" type="email" required placeholder="example@gmail.com">
+			</label>
+			<label>
+				password
+				<input name="password" type="password" required>
+			</label>
+			<label>
+				search
+				<input name="search" type="search" placeholder="search something!">
+			</label>
+			<label>
+				phone number
+				<input name="phone" type="tel">
+			</label>
+			<label>
+				text area
+				<textarea name="textarea" cols="30" rows="15"></textarea>
+			</label>
+			<label>
+				date
+				<input name="date" type="date"  placeholder="MM/DD/YYYY">
+			</label>
+			<label>
+				color
+				<input name="color" type="color">
+			</label>
+			<label>
+				file
+				<input name="file" type="file" accept="image/*" multiple>
+			</label>
+			<label>
+				checkbox
+				<input name="simple_checkbox" type="checkbox" value="the checkbox is checked" checked>
+			</label>
+			<label for="selectlist">selectlist</label>
+			<select id="selectlist" name="selectlist">
+				<option>One</option>
+				<option>Two</option>
+				<option>Three</option>
+			</select>
+			<fieldset>
+				<legend>Checkboxes in a fieldset</legend>
+				<input id="thischeck" name="checkboxlist" type="checkbox" value="This" checked>
+				<label for="thischeck">This</label>
+				<input id="orcheck" name="checkboxlist" type="checkbox" value="and or" checked>
+				<label for="orcheck">and/or</label>
+				<input id="thatcheck" name="checkboxlist" type="checkbox" value="That" checked>
+				<label for="thatcheck">That</label>
+			</fieldset>
+			<fieldset>
+				<legend>Radio in a fieldset</legend>
+				<input id="thisradio" name="radiolist" type="radio" value="This" checked>
+				<label for="thisradio">This</label>
+				<input id="orradio" name="readiolist" type="radio" value="and or">
+				<label for="orradio">and/or</label>
+				<input id="thatradio" name="radiolist" type="radio" value="That">
+				<label for="thatradio">That</label>
+			</fieldset>
+			
+			<button type="submit">Click here</button>
+		</form>
+
+		<!--using tables, used for tabular data, organized related data-->
+		<table>
+			<tr>
+				<th>Dog Breed</th>
+				<th>Typical Weight</th>
+			</tr>
+			<tr>
+				<td>Labador</td>
+				<td>50-80 lbs</td>
+			</tr>
+				<td>German Shepard</td>
+				<td>50-90 lbs</td>
+			<tr>
+			</tr>
+				<td>Pug</td>
+				<td>14-18 lbs</td>
+			<tr>
+				<td>Corgi</td>
+				<td>25-30 lbs</td>
+			</tr>
+			<tr>
+				<td>Doberman Pinscher</td>
+				<td>60-90 lbs</td>
+			</tr>
+		</table>
+		</body>
+</html>

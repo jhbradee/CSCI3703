@@ -1,0 +1,161 @@
+/*****************************************
+external css
+notes:
+
+absolute length: fixed, ex: px, cm, mm, pt
+relative length: flexible, es: em, rem, vw, vh
+css-tricks website
+precedence:
+	1. universal (*)
+	2. type (p)
+	3. class (.example)
+	4. id (#example)
+	5. !important keyword (color: #000!imporant)
+href commands/actions: link, visited, hover, active, focus
+
+@font-face {
+	font-family: blah;
+	src: url("../font/blah")
+}
+^file in relative
+
+float: wrap text around a pic/video/etc
+overflow: auto; creates a scroll bar
+position: static, relative, absolute, fixed, sticky
+
+css grid:
+display: grid; or inline-grid
+gutter (space btwn blocks):
+gap: 20px;
+control column and rows
+fr: fraction of the available space in the grid container
+grid-template-column: repeat(3, 1fr);
+
+relate different div/sections by:
+> + and ~
+
+pseudo class selectors:
+first-of-type, last-of-type, last-child, first-child
+
+Responsive Web Design (RWD)
+	1. fluid layout
+	2. flexible images
+	3. media queries
+media types:
+	1. all: all devices
+	2. print: printers and print-related displays
+	3. speech: screen reading
+	4. screen: everything that isn't print or speech
+
+
+*****************************************/
+
+/* CSS HEX
+--eggshell: #f4f1deff;
+--terra-cotta: #e07a5fff;
+--independence: #3d405bff;
+--green-sheen: #81b29aff;
+--deep-champagne: #f2cc8fff; */
+
+/* Global styles */
+html {
+	box-sizing: border-box;
+}
+*, *.before, *.after{
+	box-sizing: inherit;
+}
+* {
+	color: #3d405bff;
+	background-color: #f4f1deff;
+	padding: 5px;
+	margin: 2px;
+	font-family: 'Anek Latin', sans-serif;
+/* 	font-size: 16px;
+ */ max-width: 800px;
+	width: 85%}
+ 
+q {
+	color: #f2cc8fff;
+}
+video, iframe {
+/* 	justify-items: right; */
+	height: 300px;
+	width: 400px;
+	border-bottom: 1px dashed #3d405bff;
+	padding: 25px 0;
+}
+a:visited {
+	color: #e07a5fff;
+	background: #e5e5e5;
+	text-decoration: none;
+	padding: 2px;
+	border-radius: 4px;
+}
+a:link {
+	color: #e07a5fff;
+	background: #e5e5e5;
+	text-decoration: none;
+	padding: 2px;
+	border-radius: 4px;
+ }
+a:hover {
+	background: rgba(244, 241, 222, 80%);
+}
+ 
+h1, h3{
+	color: #81b29aff;
+	/*font-weight: 900;*/
+	border-bottom: 1px dashed #3d405bff;
+	padding: 25px 0;
+}
+.example1{
+	color: #e07a5fff;
+}
+.example2{
+	color: #f2cc8fff;
+}
+.nav-bar {
+	background: aliceblue;
+	position: fixed;
+	top: 10px;
+	width: 100px;
+	z-index: 10;
+}
+table {
+	background-color: #f2cc8fff;
+	border: 1px solid black;
+	padding: 10px;
+	flex: 0 0 200px;
+}
+th {
+	background-color: #f2cc8fff;
+}
+ol {
+	list-style-type: '>';
+	display: flex;
+	justify-content: center;
+}
+ol a {
+	padding: 20px;
+}
+/* Box Model 
+padding: 2px; all sides same
+padding: 2px 10px; top&bottom then right&left
+padding: 2px 10px 5px; top, right&left, bottom
+padding: 2px 10px 7px 5px; top, right, bottom, left
+border: width style color;
+border: 2px solid black;
+*/
+.example4 {
+	background: lightblue;
+	display: block;
+	height: 150px;
+	width: 600px;
+	margin: 0 auto;
+}
+@media screen and (min-width:750px){
+	header, footer {
+		text-align: center;
+	}
+	/* add traditional CSS coding to create responsive web page based on size of screen/what it is for (print, screen, all)*/
+}
